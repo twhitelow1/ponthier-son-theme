@@ -1,11 +1,12 @@
 <?php
 
-function customtheme_theme_support(){
+function ponthier_theme_support(){
   // Adds dynamic title tag support
-  add_theme_support('title_tag');
+  add_theme_support('title-tag');
   add_theme_support('custom-logo');
   add_theme_support('post-thumbnails');
 }
+add_action( 'after_setup_theme', 'ponthier_theme_support' );
 
 function ponthier_register_styles(){
   $version = wp_get_theme()->get( 'Version' );
@@ -16,4 +17,14 @@ function ponthier_register_styles(){
   wp_enqueue_style('ponthier-styles', get_template_directory_uri()."/page-style.css",array(), $version, 'all');
 }
 add_action('wp_enqueue_scripts', 'ponthier_register_styles');
+
+function ponthier_register_scripts(){
+  wp_enqueue_script('ponthier-jquery','https://code.jquery.com/jquery-3.4.1.slim.min.js',array(), '3.4.1', true);
+  wp_enqueue_script('ponthier-owl-carousel',get_template_directory_uri().'owlcarousel/owl.carousel.min.js',array(), '3.4.1', true);
+  wp_enqueue_script('ponthier-main',get_template_directory_uri().'/assets/js/script.js',array(), '1.0', true);
+  wp_enqueue_script('ponthier-popper','https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js',array(), '3.4.1', true);
+  wp_enqueue_script('ponthier-bootstrap','https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js',array(), '3.4.1', true);
+}
+add_action('wp_enqueue_scripts', 'customtheme_register_scripts');
+
 ?>
