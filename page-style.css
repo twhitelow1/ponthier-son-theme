@@ -122,7 +122,7 @@ footer {
   flex: 1 25%;
   width: 100%;
   max-width: 500px;
-  height: 350px;
+  height: 250px;
   perspective: 1000px;
   align-self: center;
   margin-top: 20px;
@@ -196,7 +196,7 @@ footer {
 
 .services-grid{
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill,minmax(225px, 1fr));
   grid-template-rows: auto;
 }
 
@@ -384,9 +384,6 @@ footer {
   .about{
     max-width: 100%;
     margin: 0 auto;
-  }
-  .about p{
-    font-size: 1.5em;
   }
 
   .navbar-light .navbar-brand {
