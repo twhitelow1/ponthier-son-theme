@@ -4,7 +4,7 @@ get_header();
 
    
     <!-- Start Jumbotron-->
-    <div class="jumbotron jumbotron-fluid" style="background: #18597d url('img/woodwash-filtered.jpg') no-repeat
+    <!-- <div class="jumbotron jumbotron-fluid" style="background: #18597d url('img/woodwash-filtered.jpg') no-repeat
       center; background-size: cover;">
         <div class="container text-white">
             <h1 class="text-center" id="jumbotron-heading">Ocala's Top <br> Pressure Washing <br>Professionals</h1>
@@ -12,7 +12,8 @@ get_header();
         <p class="text-center">
             <a class="btn btn-info btn-lg" href="quote.html" role="button">Get A Free Quote!</a>
         </p>
-    </div>
+    </div> -->
+    <?php dynamic_sidebar( 'jumbotron-featured' ); ?>
     <!-- End Jumbotron-->
 
     <!-- Start About Section-->
@@ -314,7 +315,7 @@ get_header();
       </div>
     </div>
     <!--End Contact-->
-    
+
     <?php
     get_footer();
     ?>

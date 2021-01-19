@@ -27,4 +27,18 @@ function ponthier_register_scripts(){
 }
 add_action('wp_enqueue_scripts', 'customtheme_register_scripts');
 
+function ponthier_widget_areas(){
+  register_sidebar( array(
+    'name' => 'Featured below navigation',
+    'id' => 'jumbotron-featured',
+    'before_widget' => '',
+    'after_widget' => '',
+    'before_title' => '<h1>',
+    'after_title' => '</h1> <div class="lead">',
+  ) );
+}
+
+add_action( 'widgets_init', 'ponthier_widget_areas');
+
+
 ?>
