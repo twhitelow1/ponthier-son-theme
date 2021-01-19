@@ -1,4 +1,12 @@
 <?php
+
+function customtheme_theme_support(){
+  // Adds dynamic title tag support
+  add_theme_support('title_tag');
+  add_theme_support('custom-logo');
+  add_theme_support('post-thumbnails');
+}
+
 function ponthier_register_styles(){
   $version = wp_get_theme()->get( 'Version' );
   wp_enqueue_style('ponthier-bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css",array(), '4.5.2', 'all');

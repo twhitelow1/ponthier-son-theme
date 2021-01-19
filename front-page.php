@@ -40,6 +40,12 @@ wp_head();
       <!--Start Nav Container-->
       <div class="container m-0 p-0 " id="nav-container">
         <!--Logo/Brand-->
+        <?php
+        if(function_exists('the_custom_logo')){
+          $custom_logo_id = get_theme_mod('custom_logo');
+          $logo = wp_get_attachment_image_src($custom_logo_id);
+       }
+        ?>
         <a class="navbar-brand mb-0 pl-0" href="index.html"><img class="img-fluid nav-logo" src="PSPW_Logo-01.png"></a>
         <!--End Brand-->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav"
